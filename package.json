@@ -7,6 +7,9 @@
     "format": "prettier **/*.js *.md --write",
     "test": "npx ava"
   },
+  "engines": {
+    "node": ">=10.0.0"
+  },
   "repository": "github:NotWoods/eleventy-plugin-date",
   "keywords": [
     "eleventy",
@@ -32,8 +35,12 @@
   "dependencies": {
     "luxon": "^1.22.0"
   },
+  "files": [
+    ".eleventy.js",
+    "README.md",
+    "LICENSE"
+  ],
   "ava": {
-    "compileEnhancements": false,
     "files": [
       "!**/fixtures/**"
     ]

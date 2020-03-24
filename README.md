@@ -21,7 +21,7 @@ module.exports = function (eleventyConfig) {
 
 This supplies the following universal [filters](https://www.11ty.dev/docs/filters/) by default:
 
-- `readableDate`: format a Date to be presented to humans. _Example: `02 January 2019`_.
+- `readableDate`: format a Date to be presented to humans. _Example: `January 2, 2019`_.
 - `isoDate`: format a Date that includes the year, month, day in ISO format. _Example: `2019-01-02`_.
 
 ## Options
@@ -40,9 +40,7 @@ module.exports = function (eleventyConfig) {
       readableMonth: { year: "numeric", month: "long" },
       // Add a new filter using formatting tokens.
       timeZone: "z",
-    },
-    // Override the locale used for the date formatting
-    locale: "en",
+    }
   });
 };
 ```
@@ -55,13 +53,6 @@ Default: `{}`
 An object that specifies date filters to be added by this plugin. The keys will be used as filter names, and the values will indicate how dates should be formatted.
 
 Values can either be options objects that can be provided to [`Intl.DateTimeFormat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat), or [tokens](https://moment.github.io/luxon/docs/manual/formatting.html#table-of-tokens) used with Luxon.
-
-### `locale`
-
-Type: `string`<br>
-Default: _system locale_
-
-Set the locale that will be used when formatting dates. For example, `'fr'` can be used to output dates in French.
 
 ### `includeDefaults`
 
