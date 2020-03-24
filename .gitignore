@@ -1,3 +1,6 @@
+# Test results
+test/fixtures/*/_site
+
 # Logs
 logs
 *.log
